@@ -1,2 +1,2 @@
 # twitterbot
-うんち
+PHPの練習としてtwitterbotをつくりました。

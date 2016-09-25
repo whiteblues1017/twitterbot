@@ -5,6 +5,8 @@ author:Hoshino Eiko
 <?php
 require "autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
+//日付指定
+$date=new DateTime('now',new DateTimeZone('Asia/Tokyo'));
 
 //Consumer Key (API Key) の値
 $consumerKey = "AkCe3qtcjeSvWellVnVPoTcsW";
@@ -17,7 +19,7 @@ $accessTokenSecret = "NuaosVtD9ung12mIttjl2jhQInrIeVv8naIAqLjhufy8t";
 
 $filelist=file('list.txt');
 if(shuffle($filelist)){
-    $message=$filelist[0];
+    $message=$filelist[0].''.$date->format('Y/m/d H:i');
 }
 
 

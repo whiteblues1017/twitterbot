@@ -3,19 +3,13 @@ Date:2016/09/23
 author:Hoshino Eiko
  */
 <?php
-require "autoload.php";
+require "../twitteroauth-master/autoload.php";
+require "config.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
 //日付指定
+
 $date=new DateTime('now',new DateTimeZone('Asia/Tokyo'));
 
-//Consumer Key (API Key) の値
-$consumerKey = "AkCe3qtcjeSvWellVnVPoTcsW";
- //Consumer Secret (API Secret)の値
-$consumerSecret = "3CtsnZg8pJh1xOVp9yxpSFy66tisA1JXuV8DbLuEApSfWEJYf2";
- //Access Tokenの値
-$accessToken = "776698205778026496-RRLwrFbRVSiWuZnzZvZXBVuoMOoa0bX";
-//Access Token Secretの値
-$accessTokenSecret = "NuaosVtD9ung12mIttjl2jhQInrIeVv8naIAqLjhufy8t";
 
 $filelist=file('list.txt');
 if(shuffle($filelist)){
